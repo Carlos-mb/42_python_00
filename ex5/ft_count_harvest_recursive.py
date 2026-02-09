@@ -1,12 +1,16 @@
 #!/usr/bin/env python3
 
-def ft_count_harvest_recursive(total: int = None, cont: int = None) -> None:
-    if cont is None:
+def ft_count_harvest_recursive(total: int = 0, cont: int = 0) -> None:
+    if cont == 0:
         ft_count_harvest_recursive(int(input("Days until harvest: ")), 1)
         return
     else:
-        print(f"Day {cont}")
-        if total != cont:
+        if total >= cont:
+            print(f"Day {cont}")
             ft_count_harvest_recursive(total, cont + 1)
-        else:
+        if total < cont:
             print("Harvest time!")
+
+if __name__ == "__main__":
+
+    ft_count_harvest_recursive()
