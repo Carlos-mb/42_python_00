@@ -10,7 +10,3 @@ def ft_count_harvest_recursive(total: int = 0, cont: int = 0) -> None:
             ft_count_harvest_recursive(total, cont + 1)
         if total < cont:
             print("Harvest time!")
-
-if __name__ == "__main__":
-
-    ft_count_harvest_recursive()
